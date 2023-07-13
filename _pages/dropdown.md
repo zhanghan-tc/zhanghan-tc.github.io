@@ -1,13 +1,12 @@
 ---
 layout: page
-title: Software & Data
+title: Software & Data sets
 nav: true
 nav_order: 5
 dropdown: true
 children: 
-    - title: publications
-      permalink: /publications/
+    - title: 4D radar SLAM data set
+      permalink: /4D_radar_dataset/
     - title: divider
-    - title: projects
-      permalink: /projects/
+    
 ---

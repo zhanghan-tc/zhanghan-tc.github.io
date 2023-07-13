@@ -1,80 +1,45 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: Modeling human's tracking behaviour
+description: Identifying human's decision criterion based on Inverse Optimal Control
+img: assets/img/rehabilitation_robot_platform.png
 importance: 1
-category: work
+category: system identification
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+(See "[Han Zhang, Axel Ringh, Weihan Jiang, Shaoyuan Li, Xiaoming Hu. Statistically Consistent Inverse Optimal Control for Linear-Quadratic Tracking with Random Time Horizon, Proceedings of the 41st Chinese Control Conference (CCC)](https://ieeexplore.ieee.org/document/9902327/)" for more details.)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+In this project, we try to model how human tracks a given reference signal in rehabilitation trainings. 
+In particular, the patient is seated at a desk in front of a screen. On the desk there is a crank, with viscosity (damping), which when rotated moves a pointer left-andright on the screen. The patient is repeatedly asked rotate the crank to track a pointer whose movement is governed by a given reference signal.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<div class="row">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/rehablitation_illustration.jpg" title="rehabilitation tracking scenario set-up" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/rehabilitation_robot_platform.png" title="rehabilitation robot platform" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    On the left, the tracking scenario set-up in rehabilitation training.  Right, our crank-shaped rehabilitation robot design.
+</div>
+
+There are basically several challenges to model such human's tracking behaviour:
+
+1. Stochasticity is involved in the entire process. In particular, there are randomness when a human makes her decision. In addition, given a reference signal, the time instant for a human to start tracking is also random. It is essential to design a system identification algorithm that is robust to these random noises.
+
+2. System identification algorithm is usually based on solving an optimization problem. Local minima is usually inevitable and impairs the accuracy of the estimation. 
+
+To this end, we model the tracking behaviour of human in such rehabilitation training as a `linear quadratic optimal tracking problem with random time-horion length`. We have managed to design a `statistically consistent` estimator that is based on `convex optimization`. This means that we can mitigate the trouble caused by noise by adding more data. The estimate result would converge to the "true" value as the data amount grows. Moreover, since the estimator is based on a convex optimization problem, it does not suffer from local minima issues. 
+
+
+To validate the precision of the model, we let the human to track reference signals that are different from the one that is used for system identification. It shows that we obtain a quite accurate prediction.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/prediction_result.png" title="rehabilitation tracking scenario set-up" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    The dashed yellow and purple lines are the given reference signals. Solid blue and red lines are predicted angular position and angular velocity. Shallow blue and red lines are collected data for validation.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}

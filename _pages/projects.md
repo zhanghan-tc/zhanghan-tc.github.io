@@ -2,11 +2,11 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Here are some selected projects that I have been doing and I think is quite interesting.
 nav: true
 nav_order: 2
 display_categories: [system identification, perception]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
