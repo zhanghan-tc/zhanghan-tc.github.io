@@ -122,9 +122,9 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: research blog # blog_name will be displayed in your blog page
+blog_name: research # blog_name will be displayed in your blog page
 blog_nav_title: Research # your blog must have a title for it to be displayed in the nav bar
-blog_description: Here I will share the ideas of the research I am doing and how can they be applied. 
+blog_description: Here I will share the research I am doing and how can they be applied. 
 permalink: /blog/:year/:title/
 
 # Pagination
