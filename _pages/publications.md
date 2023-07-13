@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Here are some selected publications regarding Inverse Optimal Control (IOC), Distributed Optimization (DO) and Multi-Agent System (MAS).
+description: Here are some selected publications regarding Inverse Optimal Control (IOC), Distributed Optimization (DO), Multi-Agent System (MAS) and Simultaneous Localization and Mapping (SLAM).
 
 sections:
   - bibquery: "@misc"

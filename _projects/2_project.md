@@ -1,80 +1,64 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: assets/img/3.jpg
+title: 4D Radar SLAM
+description: We develop SLAM algorithm based on 4D radar data
+img: assets/img/4D_radar_vehicle.png
 importance: 2
-category: work
+category: perception
 ---
+This project is supported by ZF (China) Investment Co., Ltd. (the legal entity of ZF Friedrichshafen AG in China).
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+If you are interested in the 4D radar SLAM data set, you can go [Software & Data sets](/4dradar_data) to have a look.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+（See "[Xingyi Li, Han Zhang, Weidong Chen. 4D Radar-Based Pose Graph SLAM With Ego-Velocity Pre-Integration Factor, IEEE Robotics and Automation Letters, Vol. 8, Iss. 8, 5124 - 5131, August 2023](https://ieeexplore.ieee.org/document/10173499)" for more details.）
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Millimeter wave (mmWave) radars have been widely exploited for Simultaneous Localization and Mapping (SLAM), especially in autonomous driving. Compared to cameras or LiDARs, mmWave radars are robust to adverse weather and light conditions, ensuring consistent reliability in diverse environments. Moreover, mmWave radars are more affordable, making them popular for integration in autonomous vehicles.
+
+Conventional radars can be categorized into two species:
+scanning radars and automotive radars [8]. In particular, scanning
+radars scan the environment in 360 degrees, providing 2D
+planar images without velocity information. While automotive
+radars have a smaller field of view (FoV) and offer sparse
+planar point clouds with relative radial Doppler velocity.
+Compared to conventional radars, 4D radars have a similar
+FoV to automotive radars, but provide a denser 3D point cloud with richer information, i.e., range, azimuth, elevation
+and Doppler velocity. With additional
+information and increased resolution, 4D radars open up new
+opportunities for SLAM applications.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/4D_radar.png" title="4D radar" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-5 mt-md-0">
+        {% include figure.html path="assets/img/4D_radar_doppler_vel.png" title="4D radar point cloud with doppler velocity" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    On the left, the 4D radar provided by ZF. 
+    Right, 3D radar point cloud with doppler velocity.
 </div>
+
+Due to the sparsity and noisy measurements of 4D radar point clouds, SLAM methods for LiDAR would achieve a very poor performance if directly used. In addition, due to the difference in data characteristics, conventional
+radar SLAM systems are no longer suitable for 4D radars. Therefore, we develop an accurate and robust SLAM framework
+for 4D radars. 
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/4D_radar_slam_diagram.png" title="4D radar slam diagram" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    The system overview of 4DRaSLAM. Given a 4D radar point cloud with spatial information (range, azimuth, elevation) and Doppler velocity, the
+spatial information is used in the 4D radar filter to reduce ghost and random points. Then we extract static points and estimate ego-velocity from the Doppler
+velocity. In the pose graph optimization module, radar odometry factor (RO factor), ego-velocity pre-integration factor (EVP factor), and loop closure factor
+(LC factor) are added to a pose graph. Finally, we estimate the vehicle poses and obtain a consistent global map after graph optimization.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
+We have tested our 4D radar SLAM algorithm in an industrial park and our campus under multiple scenarios. 
+The results are shown in the video below.
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.html path="https://ieeexplore.ieee.org/ielx7/7083369/10153452/10173499/supp1-3292574.mp4?arnumber=10173499" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
