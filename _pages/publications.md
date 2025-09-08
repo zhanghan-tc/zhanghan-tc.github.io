@@ -13,7 +13,7 @@ sections:
     text: "Conference and workshop papers"
   
 
-years: [2024, 2023, 2022, 2019, 2018, 2017]
+years: [2025, 2024, 2023, 2022, 2019, 2018, 2017]
 nav: true
 nav_order: 1
 ---
@@ -29,13 +29,13 @@ nav_order: 1
     {%- capture citecount -%}
     {%- bibliography_count -f {{site.scholar.bibliography}} -q {{section.bibquery}}[year={{y}}] -%}
     {%- endcapture -%}
-
+    
     {%- comment -%} If exist bibliography in actual section and year, print {%- endcomment -%}
     {%- if citecount !="0" %}
-
+    
       <h2 class="year">{{y}}</h2>
       {% bibliography -f {{site.scholar.bibliography}} -q {{section.bibquery}}[year={{y}}] %}
-
+    
     {%- endif -%}
 
   {%- endfor %}

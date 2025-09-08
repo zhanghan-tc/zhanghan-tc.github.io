@@ -21,9 +21,9 @@ social: true  # includes social icons at the bottom of the page
 
 Han Zhang was born in Shanghai, China. He received both his B.S. and M.S. degree from the Dept. of Automation in Shanghai Jiao Tong University in 2011 and 2014 respectively. He got his Ph.D. in Applied and Computational Mathematics specialized in Optimization and Systems Theory from [Dept. of Mathematics, KTH Royal Institute of Technology](https://www.kth.se/math), Sweden in 2019. He was supervised by [Xiaoming Hu](https://people.kth.se/~hu/), and co-supervised by [Elias Jarlebring](https://people.kth.se/~eliasj//). 
 
-After spending two years in industry, he is now a tenure track assistant professor in [Dept. Automation, Shanghai Jiao Tong University](https://automation.sjtu.edu.cn) since 2021. He is currently with the research group of [Autonomous Robot Lab](https://robotics.sjtu.edu.cn).
+After spending two years in industry, he is now a tenure track associate professor in [Dept. Automation, Shanghai Jiao Tong University](https://automation.sjtu.edu.cn) since 2021. He is currently with the research group of [Autonomous Robot Lab](https://robotics.sjtu.edu.cn).
 
-His main research interest includes but not limited to inverse optimal control, system identification, optimal control.
+His main research interest includes but not limited to inverse optimal control, system identification, optimal control with applications to rehabilitation and assistive robots.
 
 \\
 **If you are interested pursuing a master or Ph.D. degree under my supervision, do not hesitate to contact me.**
