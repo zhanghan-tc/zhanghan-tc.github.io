@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 4D radar SLAM data set
+title: 4D radar SLAM dataset
 permalink: /4D_radar_dataset/
 ---
 

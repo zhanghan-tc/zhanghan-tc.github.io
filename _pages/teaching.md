@@ -8,13 +8,13 @@ nav_order: 4
 ---
 
 ## Spring
-- Robotics practice (Bachelor level course)
-    - Conpendium: 
+- Comprehensive robotics practice (Bachelor level course, Shanghai Municipal Key Course)
+    - Compendium: 
         - Year 2022: [[L1]](/assets/pdf/robotics_practice/2022/L1.pdf), [[L2]](/assets/pdf/robotics_practice/2022/L2.pdf), [[L3]](/assets/pdf/robotics_practice/2022/L3.pdf), [[L4]](/assets/pdf/robotics_practice/2022/L4.pdf), [[L5]](/assets/pdf/robotics_practice/2022/L5.pdf), [[L7]](/assets/pdf/robotics_practice/2022/L7.pdf)
         - Year 2023: [[L1]](/assets/pdf/robotics_practice/2023/L1.pdf), [[L2]](/assets/pdf/robotics_practice/2023/L2.pdf), [[L2 slides]](/assets/pdf/robotics_practice/2023/Lecture%202.pptx), [[L3]](/assets/pdf/robotics_practice/2023/L3.pdf), [[L4 slides]](/assets/pdf/robotics_practice/2023/L4-KalmanFilter-Script.pptx), [[L5]](/assets/pdf/robotics_practice/2023/L5.pptx)
 
 - Nonlinear Control Theory (PhD Level course)
-    - Conpendium (hand written)
+    - Compendium (hand written)
         - [[L1 Introduction]](/assets/pdf/nonlinear_control_theory/L1.PDF)
         - [[L2 Periodic solutions]](/assets/pdf/nonlinear_control_theory/L2.PDF)
         - [[L3 Lyapunov stability]](/assets/pdf/nonlinear_control_theory/L3.PDF)
