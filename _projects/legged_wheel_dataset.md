@@ -8,7 +8,12 @@ permalink: /legged_wheel_dataset/
 # Introduction
 We present 5  datasets of legged-wheel robot containing LiDAR data, IMU data, joint sensors data and ground truth. These datasets cover different challenging scenes. To the best of our knowledge, there are limited public datasets collected from legged-wheel robots. We hope our datasets enable the development of legged-wheel robot SLAM in the community.
 
-Our datasets are now available at [here](https://drive.google.com/drive/folders/1NHJqMZAv29YUYVwqYfAKrgpfNtW15J1Y?usp=sharing).
+Our datasets are now available:
+- [Staircase Scene 1](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/staircase_scene_1.bag)
+- [Staircase Scene 2](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/staircase_scene_2.bag)
+- [Artificial Hill](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/mountain.bag)
+- [Rose Garden](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/rose_garden.bag)
+- [Botanical Garden](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/botanical.bag)
 
 # Sensor setup
 The legged-wheel robot we used to collect datasets is shown in Fig. 1. It's equipped with 2 MID360 LiDAR, a BG-610M RTK GNSS, and a Realsense d435i RGB-D camera. Note that our datasets only include the LiDAR and IMU data from 2 MID360 LiDAR, the GPS-RTK data from RTK GNSS module and joints sensors data from the robot's API. Data from d435i is not in the datasets.
