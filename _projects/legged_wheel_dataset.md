@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Legged-wheel robot SLAM dataset
-permalink: /legged_wheel_dataset/
+%permalink: /legged_wheel_dataset/
 ---
 
 
