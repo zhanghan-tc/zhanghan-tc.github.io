@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Legged-wheel robot SLAM dataset
-%permalink: /legged_wheel_dataset/
+permalink: /legged_wheel_dataset/
 ---
 
 
@@ -19,7 +19,7 @@ Our datasets are now available:
 The legged-wheel robot we used to collect datasets is shown in Fig. 1. It's equipped with 2 MID360 LiDAR, a BG-610M RTK GNSS, and a Realsense d435i RGB-D camera. Note that our datasets only include the LiDAR and IMU data from 2 MID360 LiDAR, the GPS-RTK data from RTK GNSS module and joints sensors data from the robot's API. Data from d435i is not in the datasets.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
-        {% include figure.html path="assets/img/legged_wheel_robot.png" title="the legged-wheel robot" class="img-fluid rounded z-depth-1 w-50" %}
+        {% include figure.html path="assets/img/robot_fov_new.jpg" title="the legged-wheel robot" class="img-fluid rounded z-depth-1 w-60" %}
     </div>
 </div>
 <div class="caption">
@@ -28,6 +28,7 @@ The legged-wheel robot we used to collect datasets is shown in Fig. 1. It's equi
 
 - LiDAR1(top-mounted, upside-down)：This LiDAR is mounted upside-down on the top of the robot. Its z-axis points downward, x-axis points forward along the robot’s heading direction, and the y-axis is determined by the right-hand rule (pointing to the robot’s left). It outputs 10 Hz LiDAR point cloud( topic: /livox/lidar_10_192_1_141) and 200 Hz IMU data( topic: /livox/imu_10_192_1_141).
 
+{% comment %}
 - LiDAR2(front-mounted): This LiDAR is mounted on the front of the robot. Its pose relative to LiDAR1 is given by the extrinsic transformation as shown in Fig. 2. It outputs 10 Hz LiDAR point cloud( topic: /livox/lidar_10_192_1_123) and 200 Hz IMU data( topic: /livox/imu_10_192_1_123).
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
@@ -37,6 +38,7 @@ The legged-wheel robot we used to collect datasets is shown in Fig. 1. It's equi
 <div class="caption">
     Fig. 2. The extrinsic of LiDAR2 w.r.t. LiDAR1.
 </div>
+{% endcomment %}
 
 - The GNSS system has a centimeter-level localization ability and provides the vehicle's ground truth pose in the Universal Transverse Mercator (UTM) coordinate system, at a frequency of 10 Hz.
 
