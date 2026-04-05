@@ -14,6 +14,7 @@ Our datasets are now available:
 - [Artificial Hill](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/mountain.bag)
 - [Rose Garden](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/rose_garden.bag)
 - [Botanical Garden](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/botanical.bag)
+- [Indoor staircase Only](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/upstairs1.bag)
 
 # Sensor setup
 The legged-wheel robot we used to collect datasets is shown in Fig. 1. It's equipped with 2 MID360 LiDAR, a BG-610M RTK GNSS, and a Realsense d435i RGB-D camera. Note that our datasets only include the LiDAR and IMU data from 2 MID360 LiDAR, the GPS-RTK data from RTK GNSS module and joints sensors data from the robot's API. Data from d435i is not in the datasets.
@@ -85,6 +86,16 @@ We collect the dataset in different challenging scenes in the campus of Shanghai
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/botanical.jpg" title="the botanical garden" class="img-fluid rounded z-depth-1 w-50" %}
+    </div>
+</div>
+<div class="caption">
+    Fig. 6. Botanical Garden Dataset
+</div>
+
+- Indoor Staircase Only: This sequence covers a short route that the legged-wheel robot climbs a long indoor stairs. This sequence is mainly used for a stress test for robustness.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        {% include figure.html path="assets/img/indoor_staircase_only.png" title="the indoor stair case" class="img-fluid rounded z-depth-1 w-50" %}
     </div>
 </div>
 <div class="caption">
