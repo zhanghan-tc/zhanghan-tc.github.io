@@ -8,7 +8,7 @@ permalink: /legged_wheel_dataset/
 # Introduction
 We present 5  datasets of legged-wheel robot containing LiDAR data, IMU data, joint sensors data and ground truth. These datasets cover different challenging scenes. To the best of our knowledge, there are limited public datasets collected from legged-wheel robots. We hope our datasets enable the development of legged-wheel robot SLAM in the community.
 
-Our datasets are now available:
+Our datasets are now available, you can download by clicking the links below:
 - [Staircase Scene 1](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/staircase_scene_1.bag)
 - [Staircase Scene 2](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/staircase_scene_2.bag)
 - [Artificial Hill](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/mountain.bag)
