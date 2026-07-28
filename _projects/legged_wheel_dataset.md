@@ -6,7 +6,7 @@ permalink: /legged_wheel_dataset/
 
 
 # Introduction
-We present 5  datasets of legged-wheel robot containing LiDAR data, IMU data, joint sensors data and ground truth. These datasets cover different challenging scenes. To the best of our knowledge, there are limited public datasets collected from legged-wheel robots. We hope our datasets enable the development of legged-wheel robot SLAM in the community.
+We present 8 datasets collected using legged-wheel robots, containing LiDAR data, IMU data, joint sensor data and, where available, ground truth. These datasets cover different challenging scenes. To the best of our knowledge, there are limited public datasets collected from legged-wheel robots. We hope our datasets enable the development of legged-wheel robot SLAM in the community.
 
 Our datasets are now available, you can download by clicking the links below:
 - [Staircase Scene 1](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/staircase_scene_1.bag)
@@ -14,10 +14,12 @@ Our datasets are now available, you can download by clicking the links below:
 - [Artificial Hill](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/mountain.bag)
 - [Rose Garden](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/rose_garden.bag)
 - [Botanical Garden](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/botanical.bag)
-- [Indoor staircase Only](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/upstairs1.bag)
+- [Indoor Staircase Only](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/upstairs1.bag)
+- [Wet Grass](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/wet_grass.bag)
+- [DeepRobotics Lynx M20 Half-Stair Stress Test](https://robotics.sjtu.edu.cn/upload/file/dataset/legged_wheel_dataset/m20_upstairs.bag)
 
 # Sensor setup
-The legged-wheel robot we used to collect datasets is shown in Fig. 1. It's equipped with 2 MID360 LiDAR, a BG-610M RTK GNSS, and a Realsense d435i RGB-D camera. Note that our datasets only include the LiDAR and IMU data from 2 MID360 LiDAR, the GPS-RTK data from RTK GNSS module and joints sensors data from the robot's API. Data from d435i is not in the datasets.
+Except for the DeepRobotics Lynx M20 half-stair stress-test sequence, the datasets were collected using the legged-wheel robot shown in Fig. 1. It's equipped with 2 MID360 LiDAR, a BG-610M RTK GNSS, and a Realsense d435i RGB-D camera. Note that our datasets only include the LiDAR and IMU data from 2 MID360 LiDAR, the GPS-RTK data from RTK GNSS module and joints sensors data from the robot's API. Data from d435i is not in the datasets.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/robot_fov_new.jpg" title="the legged-wheel robot" class="img-fluid rounded z-depth-1 w-60" %}
@@ -48,7 +50,7 @@ The legged-wheel robot we used to collect datasets is shown in Fig. 1. It's equi
     - For a detailed data structure of joint position, please refer to [here](https://cwjgfm21di.feishu.cn/wiki/Rj6mwC4ewiDup7kzZKFcT8fGnIb)
 
 # Data Collection
-We collect the dataset in different challenging scenes in the campus of Shanghai Jiao Tong University. During the data collection process, the average robot speed is under 1m/s. In particular:
+We collected the datasets in different challenging scenes, primarily on the campus of Shanghai Jiao Tong University. During the data collection process, the average robot speed is under 1 m/s. In particular:
 - Staircase Scene 1 & 2: different staircases with step heights 5–15 cm, 1–8 steps, feature-rich railings on one side vs. feature-scarce on the other, including single-pass and multiple back-and-forth traversals.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -92,14 +94,34 @@ We collect the dataset in different challenging scenes in the campus of Shanghai
     Fig. 6. Botanical Garden Dataset
 </div>
 
-- Indoor Staircase Only: This sequence covers a short route that the legged-wheel robot climbs a long indoor stairs. This sequence is mainly used for a stress test for robustness.
+- Indoor Staircase Only: This sequence contains a short indoor traversal in which the robot climbs a long staircase. It is used as a qualitative stress test and does not provide RTK ground truth.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
         {% include figure.html path="assets/img/indoor_staircase_only.png" title="the indoor stair case" class="img-fluid rounded z-depth-1 w-50" %}
     </div>
 </div>
 <div class="caption">
-    Fig. 6. Botanical Garden Dataset
+    Fig. 7. Indoor Staircase Only Dataset
+</div>
+
+- Wet Grass: This sequence is collected after rain on wet grass terrain with an undulating overall elevation profile and local surface irregularities. It serves as a slippery-surface stress test.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        {% include figure.html path="assets/img/wet_grass.png" title="wet grass terrain after rain" class="img-fluid rounded z-depth-1 w-75" %}
+    </div>
+</div>
+<div class="caption">
+    Fig. 8. Wet Grass Dataset
+</div>
+
+- DeepRobotics Lynx M20 Half-Stair Stress Test: This sequence uses a DeepRobotics Lynx M20 four-wheel-legged robot to climb a half-floor staircase. It is a qualitative cross-platform stress test with a different robot platform and a forward-facing LiDAR mounting configuration, and does not provide RTK ground truth.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        {% include figure.html path="assets/img/m20_4.png" title="DeepRobotics Lynx M20 platform and LiDAR field of view" class="img-fluid rounded z-depth-1 w-75" %}
+    </div>
+</div>
+<div class="caption">
+    Fig. 9. DeepRobotics Lynx M20 Platform and LiDAR Field of View for the Half-Stair Stress Test
 </div>
 
 # License
