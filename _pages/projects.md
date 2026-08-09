@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 description: Here are some selected projects that I have been doing and I think is quite interesting.
-nav: true
+# nav: true
 nav_order: 2
 display_categories: [system identification, perception]
 horizontal: true
